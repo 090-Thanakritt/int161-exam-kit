@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>INT161 • Offline API Kit</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="mark">I<span>6</span></div><div><strong>INT161</strong><small>OFFLINE API KIT</small></div></div>
+      <div class="offline"><span class="pulse"></span> ทำงานบน localhost · ไม่ใช้ AI</div>
+      <div class="nav-label">เส้นทางทำงาน</div>
+      <nav id="nav">
+        <button class="nav-item active" data-view="start"><b>00</b> เริ่มต้น <span>↗</span></button>
+        <button class="nav-item" data-view="setup"><b>01</b> กรอกข้อมูลโจทย์ <span>↗</span></button>
+        <button class="nav-item" data-view="tasks"><b>02</b> เลือกข้อที่ต้องทำ <span>↗</span></button>
+        <button class="nav-item" data-view="code"><b>03</b> โค้ดรวมและดาวน์โหลด <span>↗</span></button>
+        <button class="nav-item" data-view="test"><b>04</b> ทดสอบ Postman <span>↗</span></button>
+        <button class="nav-item" data-view="library"><b>05</b> ค้นคู่มือ <span>↗</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="progress-label">ความคืบหน้า <span id="progress-count">0/10</span></div>
+        <div class="progress"><span id="progress-bar"></span></div>
+        <p>เลือกฟีเจอร์สะสมได้เรื่อย ๆ โค้ดทุกไฟล์จะอัปเดตจากค่าที่กรอก</p>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar"><div><span class="eyebrow">INT161 / คู่มือ API ออฟไลน์</span><div id="breadcrumb">เริ่มต้น</div></div><div class="top-actions"><span class="chip">ใช้งานในเครื่อง</span><button id="search-top" class="button">ค้นหาโจทย์</button><button id="download-top" class="button primary">ดาวน์โหลด ZIP</button></div></header>
+      <div class="page" id="content"></div>
+    </main>
+  </div>
+  <div id="toast" role="status"></div>
+  <script type="module" src="./app.mjs"></script>
+</body>
+</html>

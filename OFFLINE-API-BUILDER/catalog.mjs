@@ -1,0 +1,35 @@
+export const topics=[
+ {title:'เปิดเทมเพลตครูใน WebStorm',tags:'webstorm zip package npm start import esm',description:'เปิดโฟลเดอร์ชั้นในที่มี package.json, เช็ก dependencies, กำหนด entrypoint',link:'docs/MIDTERM-TEMPLATE-FIRST.md#t0'},
+ {title:'นำเข้า SQL และเช็กตาราง',tags:'mysql database source import show create table',description:'หา SQL ที่แจกจริง, Test Connection, SOURCE, SHOW CREATE TABLE',link:'docs/MIDTERM-TEMPLATE-FIRST.md#t1'},
+ {title:'ตั้งค่า DB และพอร์ต',tags:'db-config host port password user database localhost',description:'MySQL port กับ Express port เป็นคนละค่า; ชื่อ database ดูจาก USE',link:'docs/MIDTERM-TEMPLATE-FIRST.md#t3'},
+ {title:'GET รายการทั้งหมด',tags:'get list read all select',description:'เลือก list, ตรวจ ORDER BY และข้อมูลที่ return',feature:'list',link:'docs/INT161-EXAM-HANDBOOK.md#p9'},
+ {title:'GET ตาม Primary Key',tags:'get id detail 404 string key',description:'route /:id → parse key → WHERE → mapper detail',feature:'detail',link:'docs/INT161-EXAM-HANDBOOK.md#p9'},
+ {title:'POST เพิ่มข้อมูล',tags:'post create insert 201 duplicate raw body',description:'required fields, request JSON, INSERT, 201 และ 409 เมื่อ unique ซ้ำ',feature:'create',link:'docs/INT161-EXAM-HANDBOOK.md#p9'},
+ {title:'PUT แก้ข้อมูล',tags:'put update full partial raw json body',description:'เลือก partial/full; ตรวจว่า route ส่งทั้ง ID และ req.body',feature:'update',link:'docs/INT161-EXAM-HANDBOOK.md#put-full'},
+ {title:'DELETE ลบข้อมูล',tags:'delete remove 204 404 foreign key',description:'204 ไม่มี body; ตรวจลบแล้ว GET อีกครั้ง',feature:'remove',link:'docs/INT161-EXAM-HANDBOOK.md#p9'},
+ {title:'ค้นหาและกรอง',tags:'search filter like where count query q',description:'WHERE สำหรับรายการและ COUNT ต้องใช้เงื่อนไขเดียวกัน',feature:'search',link:'docs/INT161-EXAM-HANDBOOK.md#filter'},
+ {title:'Pagination',tags:'page limit offset total totalPages',description:'default, cap, ORDER BY, OFFSET และ metadata',feature:'pagination',link:'docs/INT161-EXAM-HANDBOOK.md#page-opt'},
+ {title:'JOIN สองตาราง',tags:'join brand foreign key alias',description:'เลือก FK/PK และชื่อคอลัมน์ที่แสดง; DTO ต้องอ้าง alias จริง',feature:'join',link:'docs/MIDTERM-TEMPLATE-FIRST.md#dto-trace'},
+ {title:'Summary/Detail DTO',tags:'dto mapper entity row summary full',description:'JSON key กับ SQL column/alias คนละฝั่ง; เลือก field ของ list',feature:'dto',link:'docs/MIDTERM-TEMPLATE-FIRST.md#dto-trace'},
+ {title:'Exception Handling',tags:'error handler 400 404 409 500',description:'error middleware อยู่ท้าย app; MySQL error แปลงเป็น HTTP',link:'docs/HTTP-STATUS-CODES.md#status-table'},
+ {title:'Postman แบบออฟไลน์',tags:'postman raw json get post put delete test',description:'ยิง request ทีละขั้นและตรวจ status/body/ข้อมูลใน DB',link:'docs/INT161-EXAM-HANDBOOK.md#p9'},
+ {title:'PK เป็น string หรือ composite',tags:'productLine payment composite key',description:'เลือกโครง KEY-S / KEY-C แทน parseId ตัวเลข',link:'docs/INT161-EXAM-HANDBOOK.md#key-s'},
+ {title:'ค้นโจทย์ไทย–อังกฤษ / Question finder',tags:'โจทย์ exam question wording match recommendation reason evidence offline',description:'วางโจทย์แล้วดูคำที่พบ เหตุผล และกรณีตัวอย่าง; ข้อจำกัดของการจับคู่แบบไม่ใช้ AI',link:'docs/OFFLINE-QUESTION-FINDER.md'},
+ {title:'PUT partial หรือ full / Update body policy',tags:'put partial full update only field replace request body แก้บางค่า ส่งข้อมูลทั้งหมด',description:'partial รับเฉพาะฟิลด์ที่ส่ง; full บังคับ required; PATCH/upsert/replace ทั้งรายการต้องปรับโค้ด',feature:'update',link:'docs/OFFLINE-QUESTION-FINDER.md#put-ทำไมหน้าเว็บมี-partial-กับ-full--why-two-put-policies'},
+ {title:'ตัวอย่างโจทย์ CRUD และ DTO / Worked examples',tags:'example product pagination post duplicate join dto ตัวอย่างโจทย์',description:'ตัวอย่างไทยและอังกฤษพร้อมสิ่งที่เลือก กรอก ทดสอบ และจุดที่ต้องแก้ต่อ',link:'docs/OFFLINE-QUESTION-FINDER.md#ตัวอย่างค้น--search-examples'},
+ {title:'SQL file และตารางทั้งหมด / SQL picker',tags:'choose file selected filename tables schema sql parser select table',description:'ดูไฟล์ที่เลือก ตารางทั้งหมด จำนวนคอลัมน์ และเลือก resource หลัก',link:'docs/OFFLINE-QUESTION-FINDER.md#sql-file-และตาราง--sql-file-and-tables'}
+];
+export const exampleFields=[
+ {db:'id',body:'id',output:'id',type:'integer',required:false,summary:true,writable:false},
+ {db:'sku',body:'sku',output:'sku',type:'string',required:true,summary:true,writable:true},
+ {db:'name',body:'name',output:'name',type:'string',required:true,summary:true,writable:true},
+ {db:'brand_id',body:'brand_id',output:'brandId',type:'integer',required:true,summary:true,writable:true},
+ {db:'category',body:'category',output:'category',type:'string',required:true,summary:true,writable:true},
+ {db:'price',body:'price',output:'price',type:'number',required:true,summary:true,writable:true},
+ {db:'ram_gb',body:'ram_gb',output:'ramGb',type:'integer',required:true,summary:false,writable:true},
+ {db:'storage_gb',body:'storage_gb',output:'storageGb',type:'integer',required:true,summary:false,writable:true},
+ {db:'color',body:'color',output:'color',type:'string',required:true,summary:false,writable:true},
+ {db:'stock_quantity',body:'stock_quantity',output:'stockQuantity',type:'integer',required:false,summary:false,writable:true},
+ {db:'status',body:'status',output:'status',type:'string',required:false,summary:true,writable:true},
+ {db:'release_date',body:'release_date',output:'releaseDate',type:'date',required:false,summary:false,writable:true}
+];
